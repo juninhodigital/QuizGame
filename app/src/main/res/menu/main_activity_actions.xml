@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:myapp="http://schemas.android.com/apk/res-auto" >
+
+    <!-- Menu da pesquisa -->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/action_search"
+        myapp:showAsAction="always" />
+
+    <!-- Menu das configurações -->
+    <item android:id="@+id/action_settings"
+        android:title="Sair"
+        myapp:showAsAction="never" />
+
+    <!-- Menu das configurações -->
+    <item android:id="@+id/action1"
+          android:title="Item 1"
+          myapp:showAsAction="never" />
+
+    <!-- Menu das configurações -->
+    <item android:id="@+id/action2"
+          android:title="Item 2"
+          myapp:showAsAction="never" />
+</menu>
