@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
+import android.widget.EditText;
 
 public class SuperClass extends ActionBarActivity
 {
@@ -19,7 +20,7 @@ public class SuperClass extends ActionBarActivity
 
     }
 
-    public void Alert(String Titulo, String Mensagem)
+    public void Alert(String Titulo, String Mensagem, AlertType TipoAlerta)
     {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(Titulo);
@@ -32,7 +33,21 @@ public class SuperClass extends ActionBarActivity
             }
         });
 
-        alertDialog.setIcon(R.drawable.androidhappy);
+        if(TipoAlerta == AlertType.Info)
+        {
+            alertDialog.setIcon(R.drawable.androidhappy);
+        }
+
+        if(TipoAlerta == AlertType.Error)
+        {
+            alertDialog.setIcon(R.drawable.ic_action_error);
+        }
+
+        if(TipoAlerta == AlertType.Warning)
+        {
+            alertDialog.setIcon(R.drawable.ic_action_warning);
+        }
+
         alertDialog.show();
     }
 
@@ -53,7 +68,7 @@ public class SuperClass extends ActionBarActivity
         {
             public void onClick(DialogInterface dialog, int which)
             {
-                Alert("Informação", "Operação cancelada");
+                Alert("Informação", "Operação cancelada", AlertType.Info);
             }
         });
 
@@ -61,5 +76,24 @@ public class SuperClass extends ActionBarActivity
         alertDialog.show();
     }
 
+    public boolean IsEmpty(EditText input)
+    {
+        String ed_text = input.getText().toString().trim();
+
+        if(ed_text.isEmpty() || ed_text.length() == 0 || ed_text.equals("") || ed_text == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     //endregion
+
+    public enum AlertType
+    {
+        Info, Warning, Error
+    }
 }

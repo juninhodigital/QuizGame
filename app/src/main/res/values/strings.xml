@@ -4,8 +4,8 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_activity_teacher">activity_teacher</string>
     <string name="action_search">Pesquisar</string>
-    <string name="drawer_open">Slider Menu Opened</string>
-    <string name="drawer_close">Slider Menu Closed</string>
+        <string name="drawer_open">Aberto</string>
+    <string name="drawer_close">Fechado</string>
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
@@ -31,5 +31,6 @@
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="hello_blank_fragment">Em branco</string>
+    <string name="Identificacao">Tela da Home</string>
 
 </resources>

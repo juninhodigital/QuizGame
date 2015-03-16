@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class MainActivity extends SuperClass
@@ -25,9 +26,13 @@ public class MainActivity extends SuperClass
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        final EditText txtNome = (EditText)findViewById(R.id.txtNome);
+        final EditText txtPassword = (EditText)findViewById(R.id.txtPassword);
+
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
         Button btnCancel = (Button) findViewById(R.id.btnCancelar);
-        RadioButton rdbStudent = (RadioButton)findViewById(R.id.rdbStudent);
+        final RadioButton rdbStudent = (RadioButton)findViewById(R.id.rdbStudent);
+        final RadioButton rdbTeacher = (RadioButton)findViewById(R.id.rdbTeacher);
 
         btnLogin.setOnClickListener
         (
@@ -36,10 +41,19 @@ public class MainActivity extends SuperClass
                     @Override
                     public void onClick(View v)
                     {
-                        //TODO: implementar validacao de login aqui..
+                        if(IsEmpty(txtNome) || IsEmpty(txtPassword))
+                        {
+                            Alert("Atenção", "Por favor, preencha as informações para autenticação", AlertType.Warning);
+                        }
+                        else
+                        {
+                            Usuario.Nome = txtNome.getText().toString();
+                            Usuario.Tipo = "Professor";
 
-                        Intent oForm = new Intent(MainActivity.this, TeacherActivity.class);
-                        startActivity(oForm);
+                            Intent oForm = new Intent(MainActivity.this, TeacherActivity.class);
+                            startActivity(oForm);
+                        }
+
                     }
                 }
         );
@@ -51,7 +65,31 @@ public class MainActivity extends SuperClass
                     @Override
                     public void onClick(View v)
                     {
-                        Alert("Informação", "Operação cancelada");
+                        Alert("Informação", "Operação cancelada", AlertType.Info);
+                    }
+                }
+        );
+
+        rdbStudent.setOnClickListener
+        (
+                new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        rdbTeacher.setChecked(false);
+                    }
+                }
+        );
+
+        rdbTeacher.setOnClickListener
+        (
+                new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        rdbStudent.setChecked(false);
                     }
                 }
         );
@@ -101,11 +139,17 @@ public class MainActivity extends SuperClass
         {
             public void onClick(DialogInterface dialog, int which)
             {
-                Alert("Informação", "Operação cancelada");
+                Alert("Informação", "Operação cancelada", AlertType.Info);
             }
         });
 
         alertDialog.setIcon(R.drawable.androidhappy);
         alertDialog.show();
+    }
+
+    public static class Usuario
+    {
+        public static String Nome;
+        public static String Tipo;
     }
 }
