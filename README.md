@@ -10,5 +10,5 @@ Após o download do Android Studio, vejam se não é necessário baixar atualiza
 
 Em seguida, crie uma pasta preferencialmente no C:\Java\AndroidStudio, este caminho não pode ter espaço no nome das pastas e será utilizado para baixar o projeto do GitHub;
 
-Após baixar o projeto, é só abrir o projeto pelo Android Studio.
+Para baixar o projeto, vá até o site do github "https://github.com/juninhodigital/QuizGame" é só clicar no botão "Clone in Desktop" ou "Download ZIP", e depois é só abrir o projeto pelo Android Studio.
 
