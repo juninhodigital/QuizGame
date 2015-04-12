@@ -13,9 +13,13 @@ import android.widget.Toast;
 
 public class RankingListFragment extends ListFragment implements AdapterView.OnItemClickListener
 {
+    String[] gradeItens = null;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        gradeItens = getResources().getStringArray(R.array.students_grade);
+
         return inflater.inflate(R.layout.ranking_list_fragment, container, false);
     }
 
@@ -24,7 +28,7 @@ public class RankingListFragment extends ListFragment implements AdapterView.OnI
     {
         super.onActivityCreated(savedInstanceState);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.nav_students_grade, android.R.layout.simple_list_item_1);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.students_list, android.R.layout.simple_list_item_1);
 
         setListAdapter(adapter);
         getListView().setOnItemClickListener(this);
@@ -34,6 +38,6 @@ public class RankingListFragment extends ListFragment implements AdapterView.OnI
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-        Toast.makeText(getActivity(), "item " + position, Toast.LENGTH_SHORT ).show();
+        Toast.makeText(getActivity(), gradeItens[position], Toast.LENGTH_SHORT ).show();
     }
 }
