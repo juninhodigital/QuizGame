@@ -32,5 +32,31 @@
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="hello_blank_fragment">Em branco</string>
     <string name="Identificacao">Tela da Home</string>
+    <string name="title_activity_ranking_fragment">RankingFragment</string>
+    <string name="title_activity_student">StudentActivity</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_students_grade">
+        <item >Nota 10 | Junior</item>
+        <item >Nota 10 | Taina</item>
+        <item >Nota 10 | Matheus</item>
+        <item >Nota 10 | Nathalie</item>
+        <item >Nota 05 | Wanderson|4</item>
+        <item >Nota 10 | Junior</item>
+        <item >Nota 10 | Taina</item>
+        <item >Nota 10 | Matheus</item>
+        <item >Nota 10 | Nathalie</item>
+        <item >Nota 05 | Wanderson|4</item>
+        <item >Nota 10 | Junior</item>
+        <item >Nota 10 | Taina</item>
+        <item >Nota 10 | Matheus</item>
+        <item >Nota 10 | Nathalie</item>
+        <item >Nota 05 | Wanderson|4</item>
+        <item >Nota 10 | Junior</item>
+        <item >Nota 10 | Taina</item>
+        <item >Nota 10 | Matheus</item>
+        <item >Nota 10 | Nathalie</item>
+        <item >Nota 05 | Wanderson|4</item>
+    </string-array>
 
 </resources>

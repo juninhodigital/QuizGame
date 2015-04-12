@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class TeacherActivity extends SuperClass
+public class StudentActivity extends SuperClass
 {
     private static String TAG = MainActivity.class.getSimpleName();
 
@@ -37,17 +37,16 @@ public class TeacherActivity extends SuperClass
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher);
+        setContentView(R.layout.activity_student);
 
         mNavItems.add(new NavItem("Home", "Iníciar novo jogo", R.drawable.ic_home));
         mNavItems.add(new NavItem("Ranking", "Ranking dos usuários", R.drawable.ic_ranking));
-        mNavItems.add(new NavItem("Preferencias", "Cadastro de perguntas", R.drawable.ic_action_settings));
         mNavItems.add(new NavItem("Sobre", "Saiba mais sobre nós", R.drawable.ic_action_about));
 
         // DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 
-        // Populate the Navigtion Drawer with options
+        // Populate the Navigation Drawer with options
         mDrawerPane = (RelativeLayout) findViewById(R.id.drawerPane);
         mDrawerList = (ListView) findViewById(R.id.navList);
         DrawerListAdapter adapter = new DrawerListAdapter(this, mNavItems);
@@ -68,7 +67,8 @@ public class TeacherActivity extends SuperClass
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close)
         {
             @Override
-            public void onDrawerOpened(View drawerView) {
+            public void onDrawerOpened(View drawerView)
+            {
                 super.onDrawerOpened(drawerView);
 
                 invalidateOptionsMenu();
@@ -108,12 +108,6 @@ public class TeacherActivity extends SuperClass
                 break;
             }
             case 2:
-            {
-                fragment  = new PreferencesFragment();
-                title = "Preferências";
-                break;
-            }
-            case 3:
             {
                 fragment  = new AboutFragment();
                 title = "Sobre nós";
@@ -163,8 +157,6 @@ public class TeacherActivity extends SuperClass
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-
-
         // Pass the event to ActionBarDrawerToggle
         // If it returns true, then it has handled
         // the nav drawer indicator touch event

@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -47,13 +48,29 @@ public class MainActivity extends SuperClass
                         }
                         else
                         {
-                            Usuario.Nome = txtNome.getText().toString();
-                            Usuario.Tipo = "Professor";
+                            if( (IsEqual(txtNome,"Teacher") && IsEqual(txtPassword,"Password") && rdbTeacher.isChecked()) || (IsEqual(txtNome,"Aluno") && IsEqual(txtPassword,"Senha") && rdbStudent.isChecked()))
+                            {
+                                Usuario.Nome = txtNome.getText().toString();
 
-                            Intent oForm = new Intent(MainActivity.this, TeacherActivity.class);
-                            startActivity(oForm);
+                                if (rdbStudent.isChecked())
+                                {
+                                    Usuario.Tipo = "Aluno";
+
+                                    Intent oForm = new Intent(MainActivity.this, StudentActivity.class);
+                                    startActivity(oForm);
+                                } else
+                                {
+                                    Usuario.Tipo = "Professor";
+
+                                    Intent oForm = new Intent(MainActivity.this, TeacherActivity.class);
+                                    startActivity(oForm);
+                                }
+                            }
+                            else
+                            {
+                                Alert("Atenção", "Credenciais de autenticação informadas incorretamente.", AlertType.Warning);
+                            }
                         }
-
                     }
                 }
         );
