@@ -77,13 +77,15 @@
                 android:layout_column="6"
                 android:textColor="@android:color/white"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <AutoCompleteTextView
                 android:id="@+id/txtNome"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                android:inputType="text"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black"
+                android:hint="Username"
+                android:inputType="textAutoComplete|textAutoCorrect" >
+            </AutoCompleteTextView>
 
         </TableRow>
 
@@ -145,7 +147,7 @@
 
         <LinearLayout android:orientation="horizontal"
                       android:layout_width="match_parent"
-                      android:gravity="center">
+                      android:gravity="center" >
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -162,9 +164,30 @@
                 android:text="Cancelar"
                 android:id="@+id/btnCancelar"
                 android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:gravity="center"
+                      android:layout_height="35dp">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="160sp"
+                android:layout_height="40sp"
+                android:text="Registrar"
+                android:id="@+id/btnRegistrar"/>
 
         </LinearLayout>
 
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </TableRow>
 
 
     </TableLayout>

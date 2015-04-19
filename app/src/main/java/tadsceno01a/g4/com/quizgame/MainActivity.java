@@ -10,9 +10,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+
+import java.util.ArrayList;
 
 public class MainActivity extends SuperClass
 {
@@ -24,14 +27,29 @@ public class MainActivity extends SuperClass
 
         this.setTitle(R.string.app_name);
 
+        //region AutoComplete
+
+        ArrayList<String> searchArrayList = new ArrayList<String>();
+
+        searchArrayList.add("Aluno");
+        searchArrayList.add("Professor");
+
+        AutoCompleteAdapter adapter = new AutoCompleteAdapter(this, R.layout.autosuggestlist_item, R.id.textView1, searchArrayList);
+
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.txtNome);
+        autoCompleteTextView.setAdapter(adapter);
+
+        //endregion
+
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        final EditText txtNome = (EditText)findViewById(R.id.txtNome);
+        final AutoCompleteTextView txtNome = (AutoCompleteTextView)findViewById(R.id.txtNome);
         final EditText txtPassword = (EditText)findViewById(R.id.txtPassword);
 
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
         Button btnCancel = (Button) findViewById(R.id.btnCancelar);
+        Button btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
         final RadioButton rdbStudent = (RadioButton)findViewById(R.id.rdbStudent);
         final RadioButton rdbTeacher = (RadioButton)findViewById(R.id.rdbTeacher);
 
@@ -85,6 +103,19 @@ public class MainActivity extends SuperClass
                         Alert("Informação", "Operação cancelada", AlertType.Info);
                     }
                 }
+        );
+
+        btnRegistrar.setOnClickListener
+        (
+            new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    Intent oForm = new Intent(MainActivity.this, SubscribeActivity.class);
+                    startActivity(oForm);
+                }
+            }
         );
 
         rdbStudent.setOnClickListener

@@ -45,11 +45,14 @@
     </string-array>
 
     <string-array name="students_grade">
-        <item>Junior - Nota 10</item>
-        <item>Taina - Nota 10</item>
-        <item>Matheus - Nota 9</item>
-        <item>Nathalie - Nota 8</item>
-        <item>Wanderson - Nota 5</item>
+        <item>Nota 10</item>
+        <item>Nota 10</item>
+        <item>Nota 9</item>
+        <item>Nota 8</item>
+        <item>Nota 5</item>
     </string-array>
+    <string name="title_activity_subscribe">SubscribeActivity</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="title_activity_ranking">RankingActivity</string>
 
 </resources>

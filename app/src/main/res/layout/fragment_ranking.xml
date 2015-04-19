@@ -1,4 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context="tadsceno01a.g4.com.quizgame.RankingFragment">
@@ -9,39 +10,39 @@
         android:layout_height="fill_parent"
         android:layout_gravity="left|top">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="left|top">
-
-        <ImageView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:background="@drawable/ic_ranking"
-            android:contentDescription="Lista dos usuários"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Selecione o aluno para ver a nota"
-            android:id="@+id/textView"
-            android:paddingTop="10dp"
-            android:textColor="@android:color/holo_red_dark"
-            />
-
-    </LinearLayout>
-
-    <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="tadsceno01a.g4.com.quizgame.RankingListFragment"
-            android:id="@+id/fragment"
+            android:layout_margin="10dp"
             android:layout_gravity="left|top">
-    </fragment>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:background="@drawable/ic_ranking"
+                android:contentDescription="Lista dos usuários"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Selecione o aluno para ver a nota"
+                android:id="@+id/textView"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/holo_red_dark"
+                />
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/fragment1"
+            android:name="tadsceno01a.g4.com.quizgame.MyListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </fragment>
 
     </LinearLayout>
+
 </FrameLayout>

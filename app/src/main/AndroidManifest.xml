@@ -36,7 +36,15 @@
         </activity>
         <activity
             android:name=".StudentActivity"
-            android:label="Olá Aluno(a)">
+            android:label="Olá Aluno(a)" >
+        </activity>
+        <activity
+            android:name=".SubscribeActivity"
+            android:label="@string/title_activity_subscribe" >
+        </activity>
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="@string/title_activity_user_profile" >
         </activity>
     </application>
 

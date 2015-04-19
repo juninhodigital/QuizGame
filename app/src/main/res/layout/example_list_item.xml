@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp" >
+
+    <TextView
+        android:text="Nome"
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="Nota"
+        android:id="@+id/nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:gravity="center_vertical"
+        android:textColor="#ffff1d1b"
+        android:textSize="18sp" />
+
+</LinearLayout>
