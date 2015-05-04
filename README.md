@@ -12,3 +12,8 @@ Em seguida, crie uma pasta preferencialmente no C:\Java\AndroidStudio, este cami
 
 Para baixar o projeto, vá até o site do github "https://github.com/juninhodigital/QuizGame" é só clicar no botão "Clone in Desktop" ou "Download ZIP", e depois é só abrir o projeto pelo Android Studio.
 
+Integrantes:
+
+RA: 20732463 - José Carlos de Jesus Junior
+RA: 20680933 - Nathalie Guerreiro Costa
+
