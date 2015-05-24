@@ -5,7 +5,6 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -98,7 +97,7 @@ public class StudentActivity extends SuperClass
             case 0:
             {
                 fragment  = new HomeFragment();
-                title = "Home";
+                title = "Novo jogo";
                 break;
             }
             case 1:

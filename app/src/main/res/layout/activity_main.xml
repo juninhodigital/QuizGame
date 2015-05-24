@@ -142,7 +142,9 @@
                 android:text="Professor"
                 android:id="@+id/rdbTeacher"
                 android:layout_column="7"
-                android:textColor="@android:color/white"/>
+
+                android:textColor="@android:color/white"
+                />
         </TableRow>
 
         <LinearLayout android:orientation="horizontal"

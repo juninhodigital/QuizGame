@@ -1,10 +1,37 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context="com.looper.loop.PreferencesFragment">
 
     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:background="@drawable/newgame"
+            android:contentDescription="Logo Anhembi"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Bem vindo!\nNovo Jogo"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:id="@+id/lblTitulo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="392dp"
+        android:layout_marginTop="60dp"
         android:layout_gravity="left|top">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -13,7 +40,44 @@
             android:text="Tela da Home"
             android:id="@+id/lblNome"/>
 
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IDENTIFICACAO" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Qual é o sifnificado de ASCII??"
+            android:id="@+id/textView7"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Active Server Page"
+            android:id="@+id/rdb1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="American Science Corporation"
+            android:id="@+id/rdb2"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="American Standard Code for Information Interchange"
+            android:checked="true"
+            android:id="@+id/rdb3"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prosseguir"
+            android:id="@+id/btnNext"/>
 
     </LinearLayout>
 
